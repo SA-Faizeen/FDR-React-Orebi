@@ -37,20 +37,24 @@ const Header = () => {
       <nav c="bottom header" className="py-5 bg-[#f5f5f3]">
         <Container>
           <Flex className="justify-between">
-            <div
+            <button
               c="shop by category"
-              className="flex items-center w-1/4 gap-x-3.5"
+              className="flex items-center w-1/4 gap-x-3.5 py-5"
             >
               <Bars />
               <p className={`text-sm text-[#262626]`}>Shop by Category</p>
-            </div>
+            </button>
             <SearchBar />
             <div className="flex w-1/4 items-center gap-x-10 justify-end-safe">
-              <Flex className="items-center gap-x-1">
-								<FaUser />
-								<FaCaretDown/>
-							</Flex>
-							<FaShoppingCart/>
+              <button>
+								<Flex className="items-center gap-x-1">
+                  <FaUser />
+                  <FaCaretDown/>
+                </Flex>
+							</button>
+							<button>
+                <FaShoppingCart/>
+              </button>
             </div>
           </Flex>
         </Container>

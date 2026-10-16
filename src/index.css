@@ -13,4 +13,12 @@
       @apply text-[#262626] font-bold;
     }
   }
+
+  button {
+    @apply cursor-pointer;
+    
+    &:disabled {
+      @apply cursor-not-allowed
+    }
+  }
 }
