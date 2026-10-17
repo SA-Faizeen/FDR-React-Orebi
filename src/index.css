@@ -3,22 +3,32 @@
 
 @theme {
   --font-dmsans: "DM Sans", sans-serif;
+  --color-ink: #262626;
+  --color-muted: #767676;
+  --color-body: #6d6d6d;
+  --color-dark: #373737;
+  --color-gray-mid: #737373;
+  --color-placeholder: #c4c4c4;
+  --color-line: #f0f0f0;
+  --color-fill: #d8d8d8;
+  --color-surface: #f5f5f3;
+  --color-accent: #ffd881;
 }
 
 @layer components {
   a {
-    @apply text-[#767676] text-base hover:text-[#262626] hover:font-bold;
+    @apply text-muted text-base hover:text-ink hover:font-bold duration-300;
 
     &.active {
-      @apply text-[#262626] font-bold;
+      @apply text-ink font-bold;
     }
   }
 
   button {
     @apply cursor-pointer;
-    
+
     &:disabled {
-      @apply cursor-not-allowed
+      @apply cursor-not-allowed;
     }
   }
 }

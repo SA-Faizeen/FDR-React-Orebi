@@ -6,7 +6,7 @@ const SearchBar = () => {
       <input
         type="text"
         placeholder="Search Products"
-        className="w-full bg-white p-5 placeholder:text-[#c4c4c4] placeholder:text-sm"
+        className="w-full bg-white p-3 placeholder:text-placeholder placeholder:text-sm"
       />
       <button
         type="button"
