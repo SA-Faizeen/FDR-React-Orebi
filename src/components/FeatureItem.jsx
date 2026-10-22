@@ -7,8 +7,8 @@
 const FeatureItem = ({ icon, text }) => {
   return (
     <div className="flex items-center gap-x-2">
-      <span className="text-xl font-bold text-ink">{icon}</span>
-      <p className="text-base text-muted">{text}</p>
+      <span className="text-ink text-xl font-bold">{icon}</span>
+      <p className="text-muted text-base">{text}</p>
     </div>
   );
 };

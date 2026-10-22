@@ -1,9 +1,5 @@
 const Error = () => {
-	return (
-		<>
-			404
-		</>
-	)
-}
+  return <>404</>;
+};
 
-export default Error
+export default Error;

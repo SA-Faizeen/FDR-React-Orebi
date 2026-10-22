@@ -10,16 +10,16 @@ const Ads = () => {
     <section className="pt-35">
       <Container>
         <Flex className="justify-between">
-          <div className="w-[48%] h-187.5">
+          <div className="h-187.5 w-[48%]">
             <Link to="/shop" className="size-full">
               <img className="size-full" src={AdOne} alt="Ad one" />
             </Link>
           </div>
-          <div className="w-[48%] h-187.5 flex flex-col justify-between">
-            <Link to="/shop" className="w-full h-[47%]">
+          <div className="flex h-187.5 w-[48%] flex-col justify-between">
+            <Link to="/shop" className="h-[47%] w-full">
               <img className="size-full" src={AdTwo} alt="Ad two" />
             </Link>
-            <Link to="/shop" className="w-full h-[47%]">
+            <Link to="/shop" className="h-[47%] w-full">
               <img className="size-full" src={AdThree} alt="Ad three" />
             </Link>
           </div>

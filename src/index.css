@@ -16,8 +16,12 @@
 }
 
 @layer components {
-  a {
-    @apply text-muted text-base hover:text-ink hover:font-bold duration-300;
+  /* * {
+    outline: 1px solid red;
+  } */
+
+  a.nav-link {
+    @apply text-muted hover:text-ink text-base duration-300 hover:font-bold;
 
     &.active {
       @apply text-ink font-bold;
@@ -30,5 +34,9 @@
     &:disabled {
       @apply cursor-not-allowed;
     }
+  }
+
+  h2 {
+    @apply text-ink pb-12 text-[39px] font-bold;
   }
 }

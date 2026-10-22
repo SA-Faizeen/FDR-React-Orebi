@@ -6,12 +6,12 @@ import FeatureItem from "../components/FeatureItem";
 
 const Information = () => {
   return (
-    <section className="py-5.5 min-h-[10vh] border-y border-line">
+    <section className="border-line min-h-[10vh] border-y py-5.5">
       <Container>
         <Flex className="justify-between">
           <FeatureItem icon="2" text="Two years warranty" />
-          <FeatureItem icon={<FaTruck/>} text="Free shipping" />
-          <FeatureItem icon={<FaUndoAlt/>} text="Return policy in 30 days" />
+          <FeatureItem icon={<FaTruck />} text="Free shipping" />
+          <FeatureItem icon={<FaUndoAlt />} text="Return policy in 30 days" />
         </Flex>
       </Container>
     </section>

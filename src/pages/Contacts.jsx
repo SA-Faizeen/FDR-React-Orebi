@@ -1,9 +1,5 @@
 const Contacts = () => {
-	return (
-		<>
-			Contacts
-		</>
-	)
-}
+  return <>Contacts</>;
+};
 
-export default Contacts
+export default Contacts;

@@ -6,12 +6,12 @@ const SearchBar = () => {
       <input
         type="text"
         placeholder="Search Products"
-        className="w-full bg-white p-3 placeholder:text-placeholder placeholder:text-sm"
+        className="placeholder:text-placeholder w-full bg-white p-3 placeholder:text-sm"
       />
       <button
         type="button"
         aria-label="Search"
-        className="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer text-ink"
+        className="text-ink absolute top-1/2 right-4 -translate-y-1/2 cursor-pointer"
       >
         <TbSearch size={18} />
       </button>
