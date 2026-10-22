@@ -55,7 +55,7 @@ const Header = () => {
               <Bars />
               <p className={`text-ink text-sm`}>Shop by Category</p>
             </button>
-            <SearchBar />
+            <SearchBar className="placeholder:text-placeholder placeholder:text-sm" />
             <div className="flex w-1/4 items-center justify-end-safe gap-x-10">
               <button>
                 <Flex className="items-center gap-x-1">

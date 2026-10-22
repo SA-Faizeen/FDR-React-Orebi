@@ -52,7 +52,7 @@ const socials = [
 
 const Footer = () => {
   return (
-    <footer className="bg-surface mt-35 h-auto w-full py-13.75">
+    <footer className="bg-surface h-auto w-full py-13.75">
       <Container>
         <Flex className="justify-between">
           <Flex className="gap-x-24">

@@ -8,7 +8,7 @@ import sunglasses from "../assets/sunglasses.png";
 
 const Offers = () => {
   return (
-    <section>
+    <section className="pb-35">
       <Container>
         <h2>Special Offers</h2>
         <Flex className="gap-x-3">
