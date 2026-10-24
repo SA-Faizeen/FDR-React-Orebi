@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import ProductCard from "../components/ProductCard";
 import Container from "../components/Container";
 import CarouselBtn from "../components/CarouselBtn";
-import { products } from "../data/products";
+import useFetch from "../hooks/useFetch";
 
 const settings = {
   arrows: false,
@@ -14,14 +14,16 @@ const settings = {
   infinite: true,
   speed: 500,
   slidesToShow: 4,
-  slidesToScroll: 4,
+  slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 8000,
+  autoplaySpeed: 5000,
   pauseOnHover: true,
 };
 
 const NewArrivals = () => {
   const sliderRef = useRef(null);
+  const { data } = useFetch("https://dummyjson.com/products?limit=12");
+  const products = data?.products ?? [];
 
   return (
     <section className="py-32">
@@ -32,10 +34,10 @@ const NewArrivals = () => {
             {products.map((product) => (
               <div key={product.id} className="px-1.5">
                 <ProductCard
-                  img={product.img}
-                  name={product.name}
-                  price={product.price}
-                  color={product.color}
+                  price={`$${product.price}`}
+                  img={product.thumbnail}
+                  name={product.title}
+                  color="black"
                 />
               </div>
             ))}
