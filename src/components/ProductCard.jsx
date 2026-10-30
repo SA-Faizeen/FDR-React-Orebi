@@ -2,9 +2,33 @@ import { Flex } from "faizen-react-components";
 import ProductBadge from "./ProductBadge";
 import ProductActions from "./ProductActions";
 
+/**
+ * ProductCard displays a single product with its image, name, price, color,
+ * and an optional badge. Hovering the image reveals {@link ProductActions}.
+ *
+ * @component
+ * @param {Object}  props
+ * @param {string}  props.img          - URL (or import path) of the product image.
+ * @param {string}  props.name         - Product name shown as the card title.
+ * @param {string|number} props.price  - Price label displayed alongside the name.
+ * @param {string}  props.color        - Color / variant description shown below the name.
+ * @param {boolean} [props.badge=true] - Whether to render the {@link ProductBadge}.
+ * @param {string}  [props.badgeText="New"] - Text displayed inside the badge.
+ * @returns {JSX.Element}
+ *
+ * @example
+ * <ProductCard
+ *   img="/images/watch.png"
+ *   name="Classic Watch"
+ *   price="$120"
+ *   color="Midnight Black"
+ *   badge={true}
+ *   badgeText="Sale"
+ * />
+ */
 const ProductCard = ({ img, name, price, color, badge = true, badgeText="New" }) => {
   return (
-    <div className="border border-red-500">
+    <div>
       <div className="group relative overflow-hidden">
         <img src={img} alt={name} />
         {badge && (

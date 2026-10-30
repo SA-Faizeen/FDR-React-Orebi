@@ -39,4 +39,28 @@
   h2 {
     @apply text-ink pb-12 text-[39px] font-bold;
   }
+
+  .shop-category {
+    @apply border-line text-muted border-b pb-5 text-base;
+  }
+
+  .category-menu {
+    @apply bg-ink invisible absolute top-full right-100 z-20 w-65.75 opacity-0 transition-[translate,opacity,visibility] duration-400 ease-in-out;
+
+    &.shown {
+      @apply visible translate-x-92 opacity-100;
+    }
+  }
+
+  .category-item {
+    @apply mr-45.75 w-full border-b border-[#979797] py-4 pl-5.25 text-left text-sm text-[#BDBDBD] transition-colors hover:text-white;
+
+    & span {
+      @apply block transition-transform duration-300;
+    }
+
+    &:hover span {
+      @apply translate-x-2.5 font-bold;
+    }
+  }
 }

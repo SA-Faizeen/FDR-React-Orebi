@@ -7,6 +7,12 @@ import { FaUser, FaCaretDown, FaShoppingCart } from "react-icons/fa";
 import SearchBar from "../components/SearchBar.jsx";
 
 const Header = () => {
+  function showCategoryMenu() {
+    document.querySelector(".category-menu")
+    .classList
+    .toggle("shown");
+  }
+
   return (
     <header>
       <nav c="top header" className="border-b border-[#979797] bg-white py-4">
@@ -48,13 +54,43 @@ const Header = () => {
       >
         <Container>
           <Flex className="justify-between">
-            <button
-              c="shop by category"
-              className="flex w-1/4 items-center gap-x-3.5 py-5"
-            >
-              <Bars />
-              <p className={`text-ink text-sm`}>Shop by Category</p>
-            </button>
+            <div className="group relative w-1/4">
+              <button
+                type="button"
+                className="flex items-center gap-x-3.5 py-5"
+                onClick={showCategoryMenu}
+              >
+                <Bars />
+                <p className="text-ink text-sm">Shop by Category</p>
+              </button>
+
+              <div className="category-menu">
+                <ul>
+                  <li className="category-item">
+                    <span>Accessories</span>
+                  </li>
+                  <li className="category-item">
+                    <span>Furniture</span>
+                  </li>
+                  <li className="category-item">
+                    <span>Electronics</span>
+                  </li>
+                  <li className="category-item">
+                    <span>Clothes</span>
+                  </li>
+                  <li className="category-item">
+                    <span>Bags</span>
+                  </li>
+                  <li
+                    className="category-item"
+                    style={{ borderBottomWidth: 0 }}
+                  >
+                    <span>Home appliances</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
             <SearchBar className="placeholder:text-placeholder placeholder:text-sm" />
             <div className="flex w-1/4 items-center justify-end-safe gap-x-10">
               <button>

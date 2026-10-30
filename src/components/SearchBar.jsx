@@ -1,12 +1,13 @@
 import { TbSearch } from "react-icons/tb";
 
-const SearchBar = ({ placeholder="Search Products", className="" }) => {
+const SearchBar = ({ placeholder="Search Products", className="", onkeyup }) => {
   return (
     <div className="relative w-1/2">
       <input
         type="text"
         placeholder={placeholder}
         className={`w-full bg-white p-3 ${className}`}
+        onkeyup={onkeyup}
       />
       <button
         type="button"
