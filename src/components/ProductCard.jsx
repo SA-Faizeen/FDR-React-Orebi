@@ -8,6 +8,7 @@ import ProductActions from "./ProductActions";
  *
  * @component
  * @param {Object}  props
+ * @param {string|number} [props.id]    - Product ID.
  * @param {string}  props.img          - URL (or import path) of the product image.
  * @param {string}  props.name         - Product name shown as the card title.
  * @param {string|number} props.price  - Price label displayed alongside the name.
@@ -15,18 +16,9 @@ import ProductActions from "./ProductActions";
  * @param {boolean} [props.badge=true] - Whether to render the {@link ProductBadge}.
  * @param {string}  [props.badgeText="New"] - Text displayed inside the badge.
  * @returns {JSX.Element}
- *
- * @example
- * <ProductCard
- *   img="/images/watch.png"
- *   name="Classic Watch"
- *   price="$120"
- *   color="Midnight Black"
- *   badge={true}
- *   badgeText="Sale"
- * />
  */
-const ProductCard = ({ img, name, price, color, badge = true, badgeText="New" }) => {
+const ProductCard = ({ id, img, name, price, color, badge = true, badgeText="New" }) => {
+  const productId = id || name;
   return (
     <div>
       <div className="group relative overflow-hidden">
@@ -34,7 +26,7 @@ const ProductCard = ({ img, name, price, color, badge = true, badgeText="New" })
         {badge && (
           <ProductBadge label={badgeText} className="absolute top-5 left-5" />
         )}
-        <ProductActions />
+        <ProductActions product={{ id: productId, img, name, price, color }} />
       </div>
       <div className="pt-4.5">
         <Flex className="items-baseline justify-between gap-x-4">

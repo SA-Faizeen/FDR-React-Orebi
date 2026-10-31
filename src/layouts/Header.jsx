@@ -5,8 +5,11 @@ import logo from "../assets/Logo.png";
 import Bars from "../assets/icons/Bars.jsx";
 import { FaUser, FaCaretDown, FaShoppingCart } from "react-icons/fa";
 import SearchBar from "../components/SearchBar.jsx";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+
   function showCategoryMenu() {
     document.querySelector(".category-menu")
     .classList
@@ -99,8 +102,13 @@ const Header = () => {
                   <FaCaretDown />
                 </Flex>
               </button>
-              <button>
+              <button className="relative">
                 <FaShoppingCart />
+                {totalQuantity > 0 && (
+                  <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-[#15CBA5] text-xs font-bold text-white">
+                    {totalQuantity}
+                  </span>
+                )}
               </button>
             </div>
           </Flex>

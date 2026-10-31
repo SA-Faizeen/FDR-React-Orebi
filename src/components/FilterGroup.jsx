@@ -6,7 +6,7 @@ import { GoDotFill } from "react-icons/go";
  * @param {string} props.title - Group heading
  * @param {{ label: string, color?: string }[]} props.items - Options; a color adds a dot
  */
-const FilterGroup = ({ title, items }) => {
+const FilterGroup = ({ title, items, onClick }) => {
   return (
     <div>
       <h3 className="text-ink pb-8.75 text-xl font-bold">{title}</h3>
@@ -15,6 +15,7 @@ const FilterGroup = ({ title, items }) => {
           <li key={item.label} className="shop-category">
             <button
               type="button"
+              onClick={onClick}
               className="flex cursor-pointer items-center gap-x-2.5"
             >
               {item.color && <GoDotFill color={item.color} />}

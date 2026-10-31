@@ -34,6 +34,7 @@ const NewArrivals = () => {
             {products.map((product) => (
               <div key={product.id} className="px-1.5">
                 <ProductCard
+                  id={product.id}
                   price={`$${product.price}`}
                   img={product.thumbnail}
                   name={product.title}
